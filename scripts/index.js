@@ -1,3 +1,4 @@
+// render character options card in players info form
 (function () {
     const playerOneCharacterOptions = ["naruto", "gara", "kakashi", "minato"];
     const playerTwoCharacterOptions = ["itachi", "madara-six-paths", "obito", "pain"];
@@ -27,6 +28,7 @@
     document.querySelector(".player-character-options-container-2").innerHTML = playerTwoCharacterCardHTML;
 })();
 
+// To create player object
 function createPlayer(name, number, character) {
     function getName() {
         return name;
@@ -47,6 +49,7 @@ function createPlayer(name, number, character) {
     return { getName, getNumber, getCharacterName, getCharacterImage };
 }
 
+// To handle player form manipulation
 const playersInfoForm = (function () {
     let isCharacterSelectionEventHandlerAdded = false;
     const form = document.getElementById("players-info-form");
@@ -144,6 +147,7 @@ const playersInfoForm = (function () {
     return { getForm, getFormData, updateFormInput};
 })();
 
+// Game board
 const gameBoard = (function () {
     const ROWS = 3;
     const COLS = 3;
@@ -217,6 +221,7 @@ const gameBoard = (function () {
     };
 })();
 
+// render game ui
 const renderUI = (function () {
     const gameContentMain = document.querySelector(".game-content-main");
 
@@ -312,6 +317,7 @@ const renderUI = (function () {
     return { gameContent, playerTurn, clearGameContent, updatedGameBoard };
 })();
 
+// game logic
 const game = (function () {
     const playersFormDialogBox = document.getElementById("players-form-dialog-box");
     const showResultDialogBox = document.getElementById("show-result-dialog-box");
@@ -417,6 +423,7 @@ const game = (function () {
         );
     }
 
+    // play again event handler
     function setupPlayAgainEventHandler() {
         document.getElementById("play-again-button")
             .addEventListener("click", (event) => {
@@ -430,6 +437,7 @@ const game = (function () {
         );
     }
 
+    // check winner
     function checkIsPlayerWon(player) {
         const board = gameBoard.getGameBoard();
         const playerNumber = player.getNumber();
