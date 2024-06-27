@@ -1,0 +1,138 @@
+/* PLAYERS FORM DIALOG BOX START */
+
+#players-form-dialog-box {
+    width: 80rem;
+    padding: 2.5rem 1rem 1rem 1rem;
+    background: linear-gradient(
+        to bottom right,
+        #fdf4af,
+        #edb870,
+        #f7d8b4,
+        #e86e38,
+        #f72405
+    );
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 5);
+}
+
+#players-form-dialog-box::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.players-form-dialog-box-heading-text {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* PLAYERS FORM DIALOG BOX END */
+
+/* PLAYERS INFO FORM START*/
+
+#players-info-form {
+    padding: 1rem;
+    text-align: center;
+}
+
+#players-info-form > div {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.player-info-section {
+    width: 100%;
+}
+
+.player-name-input {
+    width: 100%;
+    font-size: 2rem;
+    font-family: "njnaruto";
+    border: none;
+    border-radius: 4px;
+    padding: 1.2rem;
+    margin-bottom: 3rem;
+    caret-color: red;
+}
+
+.player-name-input:focus {
+    outline: 2px solid red;
+}
+
+.player-character-heading-text {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.player-character-options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 16rem 16rem;
+    gap: 1rem;
+}
+
+.character-option-label {
+    padding: 1rem;
+    background: transparent;
+    background-color: black;
+    border-radius: 4px;
+    border: 2px solid white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    box-shadow: 5px 5px 5px black;
+    position: relative;
+}
+
+.character-option-label input[type="radio"] {
+    display: none;
+}
+
+.character-option-label img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0.5rem 0 red);
+}
+
+.character-option-label:hover {
+    background-color: tomato;
+}
+
+.character-option-label:hover > img {
+    filter: drop-shadow(0.5rem 0 black);
+}
+
+.character-option-label.selected {
+    background-color: purple;
+}
+
+.character-option-label.selected > img {
+    filter: drop-shadow(0.5rem 0 black);
+}
+
+#start-game-button {
+    font-size: 2rem;
+    font-family: "njnaruto";
+    text-transform: capitalize;
+    background-color: #e86e38;
+    border-width: 3px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+}
+
+#start-game-button:active {
+    color: white;
+}
+
+/* PLAYERS INFO FORM END */

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tic Tac Toe</title>
+        <link rel="shortcut icon" href="assets/icons/icon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <link rel="stylesheet" href="styles/form.css" />
+        <script src="scripts/index.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- GAME CONTENT START -->
+            <div class="game-content-container">
+                <!-- GAME CONTENT HEADER -->
+                <header class="game-content-header">
+                    <p>TIC TAC TOE</p>
+                </header>
+                <!-- GAME CONTENT MAIN -->
+                <main class="game-content-main"></main>
+                <!-- GAME CONTENT FOOTER -->
+                <footer class="game-content-footer">
+                    <img src="assets/images/uchiha-clan.webp" alt="uchiha clan symbol"/>
+                </footer>
+            </div>
+            <!-- GAME CONTENT END -->
+
+            <!-- % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % -->
+
+            <!-- DIALOG BOX PLAYERS FORM INFO -->
+            <dialog id="players-form-dialog-box">
+                <h2 class="players-form-dialog-box-heading-text">- select -</h2>
+                <form method="dialog" id="players-info-form">
+                    <div>
+                        <div class="player-info-section">
+                            <input
+                                type="text"
+                                class="player-name-input"
+                                id="player-one-name-input"
+                                value="PLAYER 1"
+                                name="playerOneName"
+                                autocomplete="off"
+                                spellcheck="false"
+                                autofocus
+                            />
+                            <!-- PLAYER ONE CHARACTERS OPTIONS -->
+                            <div class="player-character-container">
+                                <p class="player-character-heading-text">characters</p>
+                                <div class="player-character-options-container player-character-options-container-1"></div>
+                            </div>
+                        </div>
+                        <div class="player-info-section">
+                            <input
+                                type="text"
+                                class="player-name-input"
+                                id="player-two-name-input"
+                                value="PLAYER 1"
+                                name="playerTwoName"
+                                autocomplete="off"
+                                spellcheck="false"
+                            />
+                            <!-- PLAYER TWO CHARACTER OPTIONS -->
+                            <div class="player-character-container">
+                                <p class="player-character-heading-text">characters</p>
+                                <div class="player-character-options-container player-character-options-container-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="start-game-button">start</button>
+                </form>
+            </dialog>
+
+            <!-- DIALOG BOX SHOW RESULT -->
+            <dialog id="show-result-dialog-box">
+                <p id="show-result"></p>
+                <button type="button" class="common-button" id="play-again-button">play again</button>
+            </dialog>
+        </div>
+    </body>
+</html>
