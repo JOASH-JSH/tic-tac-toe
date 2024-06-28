@@ -1,3 +1,5 @@
+"use strict";
+
 // render character options card in players info form
 (function () {
     const playerOneCharacterOptions = ["naruto", "gara", "kakashi", "minato"];
